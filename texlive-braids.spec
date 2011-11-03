@@ -1,3 +1,9 @@
+# revision 23790
+# category Package
+# catalog-ctan /graphics/pgf/contrib/braids
+# catalog-date 2011-08-30 13:04:52 +0200
+# catalog-license lppl1.3
+# catalog-version 1.0
 Name:		texlive-braids
 Version:	1.0
 Release:	1
@@ -44,6 +50,7 @@ styling the strands and for drawing "floors".
 %doc %{_texmfdistdir}/doc/latex/braids/braids_doc.tex
 #- source
 %doc %{_texmfdistdir}/source/latex/braids/braids.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ styling the strands and for drawing "floors".
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
