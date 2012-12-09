@@ -51,3 +51,18 @@ styling the strands and for drawing "floors".
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
++ Revision: 749884
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
++ Revision: 717981
+- texlive-braids
+- texlive-braids
+- texlive-braids
+- texlive-braids
+- texlive-braids
+
