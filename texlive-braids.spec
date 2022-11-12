@@ -1,19 +1,13 @@
-# revision 23790
-# category Package
-# catalog-ctan /graphics/pgf/contrib/braids
-# catalog-date 2011-08-30 13:04:52 +0200
-# catalog-license lppl1.3
-# catalog-version 1.0
 Name:		texlive-braids
-Version:	1.0
-Release:	11
+Version:	64817
+Release:	1
 Summary:	Draw braid diagrams with PGF/TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/braids
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/braids.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/braids.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/braids.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/braids.r64817.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/braids.doc.r64817.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/braids.source.r64817.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,43 +20,27 @@ a word in the braid group, and there are many options for
 styling the strands and for drawing "floors".
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/latex/braids/braids.sty
-%doc %{_texmfdistdir}/doc/latex/braids/README
-%doc %{_texmfdistdir}/doc/latex/braids/braids_doc.pdf
-%doc %{_texmfdistdir}/doc/latex/braids/braids_doc.tex
+%{_texmfdistdir}/tex/latex/braids
+%doc %{_texmfdistdir}/doc/latex/braids
 #- source
-%doc %{_texmfdistdir}/source/latex/braids/braids.dtx
+%doc %{_texmfdistdir}/source/latex/braids
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 749884
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 717981
-- texlive-braids
-- texlive-braids
-- texlive-braids
-- texlive-braids
-- texlive-braids
-
