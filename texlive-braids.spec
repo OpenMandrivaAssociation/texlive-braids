@@ -1,6 +1,6 @@
 Name:		texlive-braids
-Version:	64817
-Release:	2
+Version:	69398
+Release:	1
 Summary:	Draw braid diagrams with PGF/TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/braids
