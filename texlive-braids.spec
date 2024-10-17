@@ -3,7 +3,7 @@ Version:	69398
 Release:	1
 Summary:	Draw braid diagrams with PGF/TikZ
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/braids
+URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/braids
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/braids.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/braids.doc.r%{version}.tar.xz
